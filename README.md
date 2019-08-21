@@ -32,8 +32,9 @@ info_video returns a list containg video information.
 load_video returns a cimg object that is specified frames of video.
 
 ```r
-# get video information
 video <- "path_to_your_video_file"
+
+# get video information
 info_video(video)
 
 # load first frame of video
