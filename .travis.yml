@@ -2,12 +2,33 @@
 
 language: r
 sudo: false
+warnings_are_errors: true
 chache: packages
 
 r:
   - oldrel
   - release
   - devel
+
+r_check_args: --use-valgrind
+
+addons:
+  apt:
+    packages:
+      - libtiff-dev
+      - libpng-dev
+      - libjpeg-dev
+      - libfftw3-dev
+      - libtesseract-dev
+      - libleptonica-dev
+      - tesseract-ocr-eng
+      - tesseract-ocr-fra
+      - libpoppler-cpp-dev
+      - valgrind
+      - libavfilter-dev
+    sources:
+      - sourceline: 'ppa:cran/ffmpeg-4'
+      - sourceline: 'ppa:cran/ffmpeg-3'
 
 r_packages:
   - covr
