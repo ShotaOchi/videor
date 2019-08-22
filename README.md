@@ -31,6 +31,10 @@ info_video returns a list containg video information.
 
 load_video returns a cimg object that is specified frames of video.
 
+load_video works fine for mp4 file.
+
+However, load_video doesn't works fine for gif file and webm file.
+
 ```r
 video <- "path_to_your_video_file"
 
