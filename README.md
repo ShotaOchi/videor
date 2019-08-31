@@ -13,7 +13,10 @@ videor is an R package for video analysis based on the package 'imager'.
 This package may be removed in the future if 'imager' becomes a good package for video analysis.
 
 ## Installation
-you can install videor from GitHub.
+
+You can install videor from GitHub.
+
+Note that you need to install FFmpeg and FFprobe.
 
 Run the following R code to install videor.
 ```r
@@ -31,9 +34,7 @@ info_video returns a list containg video information.
 
 load_video returns a cimg object that is specified frames of video.
 
-load_video works fine for mp4 file.
-
-However, load_video doesn't works fine for gif file and webm file.
+load_video works fine for gif file, webm file, and mp4 file.
 
 ```r
 video <- "path_to_your_video_file"

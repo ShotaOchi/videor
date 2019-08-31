@@ -13,7 +13,8 @@ info_video(video)
 a list of video information
 }
 \description{
-get video information such as width, height, format, duration and framerate
+get video information such as width, height, format, duration and framerate.
+Note that this function is relatively slow except when video is mp4 file.
 }
 \author{
 Shota Ochi
