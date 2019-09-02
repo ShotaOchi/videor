@@ -27,6 +27,7 @@ addons:
       - valgrind
       - libavfilter-dev
       - libcairo2-dev
+      - libxt-dev
     sources:
       - sourceline: 'ppa:cran/ffmpeg-4'
       - sourceline: 'ppa:cran/ffmpeg-3'
