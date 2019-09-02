@@ -4,15 +4,17 @@
 \alias{load_video}
 \title{Loading Video}
 \usage{
-load_video(video, frames)
+load_video(video, frames, nb_frames)
 }
 \arguments{
 \item{video}{path to a video file}
 
-\item{frames}{a numeric vecotr that specfies a frame or a numeric vector that specifies start frame and end frame}
+\item{frames}{a numeric vecotr that specfies a frame or a numeric vector that specifies start frame and end frame. if frames is missing, try to load all frames.}
+
+\item{nb_frames}{the number of frames. if nb_frames is missing, info_video(video)$video$frames is used.}
 }
 \value{
-a list of video information
+a cimg object
 }
 \description{
 load specified frames of video
