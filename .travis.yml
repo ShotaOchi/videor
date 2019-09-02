@@ -26,6 +26,7 @@ addons:
       - libpoppler-cpp-dev
       - valgrind
       - libavfilter-dev
+      - libcairo2-dev
     sources:
       - sourceline: 'ppa:cran/ffmpeg-4'
       - sourceline: 'ppa:cran/ffmpeg-3'
