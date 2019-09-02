@@ -21,14 +21,12 @@ load_video <- function(video, frames, nb_frames)
       nb_frames <- info_video(video)$video$frames
     }
     assert_nb_frames(nb_frames)
-    assert_frames(frames, video, nb_frames) 
+    assert_frames(frames, nb_frames) 
     if (length(frames) == 1)
     {
-      frames <- as.integer(c(frames[1], frames[1]))
-    } else
-    {
-      frames <- as.integer(c(frames[1], frames[2]))
+      frames <- c(frames[1], frames[1])
     }
+    frames <- as.integer(frames)
   }
   load.video(video, extra.args = sprintf("-vf trim=start_frame=%d:end_frame=%d,setpts=PTS-STARTPTS", frames[1] - 1, frames[2]))
 }

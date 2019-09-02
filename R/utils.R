@@ -9,7 +9,7 @@ assert_nb_frames <- function(nb_frames)
 }
 
 #$' must call assert_frames after assert_video and assert_nb_frames
-assert_frames <- function(frames, video, nb_frames)
+assert_frames <- function(frames, nb_frames)
 {
   assert_numeric(frames, lower = 1, upper = nb_frames, finite = TRUE, any.missing = FALSE, min.len = 1, max.len = 2, sorted = TRUE, .var.name = deparse(substitute(frames)))
 }
