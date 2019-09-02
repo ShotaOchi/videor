@@ -53,7 +53,7 @@ load_video uses info_video to know the number of frames.
 
 However, info_video is slow except when video is mp4 file.
 
-That's why load_video has the argument nb_frames to speed up loading frames.
+That's why load_video has the argument nb_frames, which enables us to tell the number of frames to load_video.
 
 ```r
 nb_frames <- info_video(video)$video$frames
