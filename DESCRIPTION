@@ -16,7 +16,7 @@ Imports:
 URL: https://github.com/ShotaOchi/videor
 BugReports: https://github.com/ShotaOchi/videor/issues
 NeedsCompilation: no
-SystemRequirements:	FFmpeg, FFprobe
+SystemRequirements: FFmpeg, FFprobe
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Encoding: UTF-8
