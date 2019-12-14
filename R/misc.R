@@ -9,7 +9,4 @@ NULL
 #' @importFrom checkmate assert_access
 #' @importFrom checkmate assert_character
 #' @importFrom checkmate assert_numeric
-#' @importFrom stringi stri_detect
-#' @importFrom stringi stri_extract_first
-#' @importFrom stringi stri_split
 NULL

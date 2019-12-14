@@ -12,7 +12,6 @@ Depends:
     imager
 Imports: 
     checkmate (>= 1.9.1),
-    stringi
 Suggests:
     testthat (>= 2.0.0)
 URL: https://github.com/ShotaOchi/videor
