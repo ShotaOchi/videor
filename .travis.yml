@@ -30,6 +30,7 @@ addons:
       - libxt-dev
       - libx11-dev
       - r-cran-cairo
+      - ffmpeg
     sources:
       - sourceline: 'ppa:cran/ffmpeg-4'
       - sourceline: 'ppa:cran/ffmpeg-3'
