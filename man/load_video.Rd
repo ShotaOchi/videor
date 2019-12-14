@@ -11,7 +11,7 @@ load_video(video, frames, nb_frames)
 
 \item{frames}{a numeric vecotr that specfies a frame or a numeric vector that specifies start frame and end frame. if frames is missing, try to load all frames.}
 
-\item{nb_frames}{the number of frames. if nb_frames is missing, info_video(video)$video$frames is used.}
+\item{nb_frames}{the number of frames. if nb_frames is missing, info_video(video)$frames is used.}
 }
 \value{
 a cimg object

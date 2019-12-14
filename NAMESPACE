@@ -3,6 +3,7 @@
 export(info_video)
 export(load_video)
 importFrom(checkmate,assert_access)
+importFrom(checkmate,assert_character)
 importFrom(checkmate,assert_numeric)
 importFrom(imager,load.video)
 importFrom(stringi,stri_detect)

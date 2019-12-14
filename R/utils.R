@@ -1,6 +1,7 @@
 assert_video <- function(video)
 {
   assert_access(video, access = 'r', .var.name = deparse(substitute(video)))
+  assert_character(video, len = 1, .var.name = deparse(substitute(video)))
 }
 
 assert_nb_frames <- function(nb_frames)

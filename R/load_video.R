@@ -3,7 +3,7 @@
 #' load specified frames of video
 #' @param video path to a video file
 #' @param frames a numeric vecotr that specfies a frame or a numeric vector that specifies start frame and end frame. if frames is missing, try to load all frames.
-#' @param nb_frames the number of frames. if nb_frames is missing, info_video(video)$video$frames is used.
+#' @param nb_frames the number of frames. if nb_frames is missing, info_video(video)$frames is used.
 #' @return a cimg object
 #' @author Shota Ochi
 #' @export
@@ -13,7 +13,7 @@ load_video <- function(video, frames, nb_frames)
   assert_video(video)
   if (missing(frames))
   {
-    frames <- as.integer(c(1, info_video(video)$video$frames))
+    frames <- as.integer(c(1, info_video(video)$frames))
   } else
   {
     if (missing(nb_frames))
