@@ -10,8 +10,6 @@
 
 videor is an R package for video analysis based on the package 'imager'.
 
-This package may be removed in the future if 'imager' becomes a good package for video analysis.
-
 ## Installation
 
 You can install videor from GitHub.
@@ -49,9 +47,9 @@ load_video(video, 1)
 load_video(video, c(10, 20))
 ```
 
-load_video uses info_video to know the number of frames.
+load_video uses info_video to get the number of frames.
 
-However, info_video is slow except when video is mp4 file.
+However, info_video is slow.
 
 That's why load_video has the argument nb_frames, which enables us to tell the number of frames to load_video.
 

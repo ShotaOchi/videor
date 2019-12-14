@@ -11,12 +11,12 @@ Depends:
     R (>= 3.5.0),
     imager
 Imports: 
-    av,
-    checkmate (>= 1.9.1)
+    checkmate (>= 1.9.1),
+    stringi
 URL: https://github.com/ShotaOchi/videor
 BugReports: https://github.com/ShotaOchi/videor/issues
 NeedsCompilation: no
-SystemRequirements: FFmpeg, FFprobe
+SystemRequirements: FFmpeg
 LazyData: true
 RoxygenNote: 7.0.2
 Encoding: UTF-8

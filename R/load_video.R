@@ -18,7 +18,7 @@ load_video <- function(video, frames, nb_frames)
   {
     if (missing(nb_frames))
     {
-      nb_frames <- info_video(video)$video$frames
+      nb_frames <- info_video(video)$frames
     }
     assert_nb_frames(nb_frames)
     assert_frames(frames, nb_frames) 
