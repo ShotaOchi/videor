@@ -8,7 +8,7 @@ init:
         Import-Module '..\appveyor-tool.ps1'
 
 environment:
-  ffmpeg_url: https://ffmpeg.zeranoe.com/builds/
+  ffmpeg_download: https://ffmpeg.zeranoe.com/builds/
   ffmpeg_version: 3.4.1
   ffmpeg_platform: win64
 
