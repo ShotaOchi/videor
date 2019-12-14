@@ -49,7 +49,7 @@ load_video(video, c(10, 20))
 
 load_video uses info_video to get the number of frames.
 
-However, info_video is slow.
+However, info_video is slow except when video is mp4 file.
 
 That's why load_video has the argument nb_frames, which enables us to tell the number of frames to load_video.
 

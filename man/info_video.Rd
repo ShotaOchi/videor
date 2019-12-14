@@ -16,6 +16,10 @@ a list of video information
 get video information such as width, height, format, duration and framerate.
 Note that this function is relatively slow except when video is mp4 file.
 }
+\examples{
+video <- system.file("extdata", "bees.mp4", package = "videor")
+info_video(video)
+}
 \author{
 Shota Ochi
 }
