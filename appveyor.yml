@@ -9,8 +9,6 @@ init:
 
 install:
   ps: Bootstrap
-
-install:
   - cinst ffmpeg
 
 cache:
