@@ -8,15 +8,16 @@ init:
         Import-Module '..\appveyor-tool.ps1'
 
 environment:
-  ffmpeg_download: https://ffmpeg.zeranoe.com/builds/
+  ffmpeg_url: https://ffmpeg.zeranoe.com/builds/
   ffmpeg_version: 3.4.1
   ffmpeg_platform: win64
+  ffmpeg_destination: c:\application
 
 install:
   - ps: Bootstrap
-  - ps: Start-FileDownload $env:ffmpeg_download$env:ffmpeg_platform/static/ffmpeg-$env:ffmpeg_version-$env:ffmpeg_platform-static.zip
-  - 7z x ffmpeg-%ffmpeg_version%-%ffmpeg_platform%-static.zip
-  - PATH=%PATH%;%cd%\ffmpeg-%ffmpeg_version%-%ffmpeg_platform%-static\bin
+  - ps: SInvoke-WebRequest $env:ffmpeg_download$env:ffmpeg_platform/static/ffmpeg-$env:ffmpeg_version-$env:ffmpeg_platform-static.zip $env:ffmpeg_destination\ffmpeg.zip 
+  - 7z x %ffmpeg_destination%\ffmpeg.zip 
+  - PATH=%PATH%;%ffmpeg_destination%\ffmpeg-%ffmpeg_version%-%ffmpeg_platform%-static\bin
 
 cache:
   - C:\RLibrary
