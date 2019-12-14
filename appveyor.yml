@@ -8,9 +8,10 @@ init:
         Import-Module '..\appveyor-tool.ps1'
 
 install:
-  -cinst ffmpeg
   ps: Bootstrap
 
+install:
+  - cinst ffmpeg
 
 cache:
   - C:\RLibrary
