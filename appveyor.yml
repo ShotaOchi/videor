@@ -15,7 +15,7 @@ environment:
 
 install:
   - ps: Bootstrap
-  - ps: SInvoke-WebRequest $env:ffmpeg_download$env:ffmpeg_platform/static/ffmpeg-$env:ffmpeg_version-$env:ffmpeg_platform-static.zip $env:ffmpeg_destination\ffmpeg.zip 
+  - ps: Invoke-WebRequest $env:ffmpeg_download$env:ffmpeg_platform/static/ffmpeg-$env:ffmpeg_version-$env:ffmpeg_platform-static.zip $env:ffmpeg_destination\ffmpeg.zip 
   - 7z x %ffmpeg_destination%\ffmpeg.zip 
   - PATH=%PATH%;%ffmpeg_destination%\ffmpeg-%ffmpeg_version%-%ffmpeg_platform%-static\bin
 
