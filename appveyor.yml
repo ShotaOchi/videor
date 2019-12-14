@@ -7,9 +7,16 @@ init:
         Invoke-WebRequest http://raw.github.com/krlmlr/r-appveyor/master/scripts/appveyor-tool.ps1 -OutFile "..\appveyor-tool.ps1"
         Import-Module '..\appveyor-tool.ps1'
 
+environment:
+  ffmpeg_download: https://ffmpeg.zeranoe.com/builds/
+  ffmpeg_version: 3.4.1
+  ffmpeg_platform: win64
+
 install:
-  ps: Bootstrap
-  - cinst ffmpeg
+  - ps: Bootstrap
+  - ps: Start-FileDownload $env:ffmpeg_download$env:ffmpeg_platform/static/ffmpeg-$env:ffmpeg_version-$env:ffmpeg_platform-static.zip
+  - 7z x ffmpeg-%ffmpeg_version%-%ffmpeg_platform%-static.zip
+  - PATH=%PATH%;%cd%\ffmpeg-%ffmpeg_version%-%ffmpeg_platform%-static\bin
 
 cache:
   - C:\RLibrary
