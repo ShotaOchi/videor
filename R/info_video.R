@@ -20,7 +20,7 @@ info_video <- function(video)
   out$height <- as.numeric(tmp[3])
   out$format <- tmp[4]
   out$framerate <- ifelse(!is.na(suppressWarnings(as.numeric(tmp[5]))), as.numeric(tmp[5]), eval(parse(text = tmp[5])))
-  out$duration <- as.numeric(tmp[6])
-  out$frames <- as.numeric(ifelse(!is.na(tmp[7]), tmp[7], system(sprintf("fprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 %s", video), intern = TRUE)))
+  out$duration <- suppressWarnings(as.numeric(tmp[6]))
+  out$frames <- as.numeric(ifelse(!is.na(suppressWarnings(as.numeric(tmp[7]))), tmp[7], system(sprintf("ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 %s", video), intern = TRUE)))
   out
 }
