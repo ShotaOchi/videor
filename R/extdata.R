@@ -7,3 +7,11 @@
 #' @examples
 #' system.file("extdata", "bees.mp4", package = "videor")
 NULL
+
+#' Video of Counting Numbers
+#'
+#' This video was made by Shota Ochi.
+#' @name counts.gif
+#' @examples
+#' system.file("extdata", "counts.gif", package = "videor")
+NULL
