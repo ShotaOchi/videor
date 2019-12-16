@@ -10,8 +10,6 @@ r:
   - release
   - devel
 
-r_check_args: --use-valgrind
-
 addons:
   apt:
     packages:
@@ -24,8 +22,6 @@ addons:
       - tesseract-ocr-eng
       - tesseract-ocr-fra
       - libpoppler-cpp-dev
-      - valgrind
-      - libavfilter-dev
       - libcairo2-dev
       - libxt-dev
       - libx11-dev
