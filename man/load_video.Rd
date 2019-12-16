@@ -4,7 +4,7 @@
 \alias{load_video}
 \title{Loading Video}
 \usage{
-load_video(video, frames, nb_frames)
+load_video(video, frames, nb_frames, step = 1, maxSize = 1)
 }
 \arguments{
 \item{video}{path to a video file}
@@ -12,12 +12,21 @@ load_video(video, frames, nb_frames)
 \item{frames}{a numeric vecotr that specfies a frame or a numeric vector that specifies start frame and end frame. if frames is missing, try to load all frames.}
 
 \item{nb_frames}{the number of frames. if nb_frames is missing, info_video(video)$frames is used.}
+
+\item{step}{step value for frame reading.}
+
+\item{maxSize}{maximum allowed size in memory, in GB.}
 }
 \value{
 a cimg object
 }
 \description{
 load specified frames of video
+}
+\examples{
+counts <- system.file("extdata", "counts.gif", package = "videor")
+load_video(counts, c(2,7))
+load_video(counts, c(2,7), step = 2)
 }
 \author{
 Shota Ochi
