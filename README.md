@@ -35,7 +35,8 @@ load_video returns a cimg object that is specified frames of video.
 load_video works fine for gif file, webm file, and mp4 file.
 
 ```r
-video <- "path_to_your_video_file"
+library(videor)
+video <- system.file("extdata", "counts.gif", package = "videor")
 
 # get video information
 info_video(video)
@@ -43,8 +44,11 @@ info_video(video)
 # load first frame of video
 load_video(video, 1)
 
-# load a part of video (from 10th frame to 20th frame)
-load_video(video, c(10, 20))
+# load a part of video (from 4th frame to 8th frame)
+load_video(video, c(4, 8))
+
+# load a part of video (from 4th frame to 8th frame, every 2 frames)
+load_video(video, c(4, 8), step = 2)
 ```
 
 load_video uses info_video to get the number of frames.
