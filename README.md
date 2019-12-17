@@ -75,7 +75,7 @@ frame(a,1) %>% plot
 ```
 a <-  load_video(video, c(1, 3))
 # apply isoblur function to all frames
-b <- iiply(a, "z", isoblur, sigma = 5)
+iiply(a, "z", isoblur, sigma = 5) %>% play(delay = 300, loop = TRUE)
 ```
 
 ## Contribution
