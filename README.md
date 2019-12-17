@@ -32,8 +32,6 @@ info_video returns a list containg video information.
 
 load_video returns a cimg object that is specified frames of video.
 
-load_video works fine for gif file, webm file, and mp4 file.
-
 ```r
 library(videor)
 video <- system.file("extdata", "counts.gif", package = "videor")
@@ -58,13 +56,30 @@ However, info_video is slow except when video is mp4 file.
 That's why load_video has the argument nb_frames, which enables us to tell the number of frames to load_video.
 
 ```r
-nb_frames <- info_video(video)$video$frames
+nb_frames <- info_video(video)$frames
 load_video(video, c(10, 20), nb_frames)
 ```
 
 I'm going to add functions in the future, but not soon.
 
+## Tips
+
+### How to extract a frame from cimg object
+```
+a <-  load_video(video, c(1, 3))
+# extract first frame 
+frame(a,1) %>% plot
+```
+
+### How to apply a function to all frames of cimg object
+```
+a <-  load_video(video, c(1, 3))
+# apply isoblur function to all frames
+b <- iiply(a, "z", isoblur, sigma = 5)
+```
+
 ## Contribution
+
 You're welcome to create issues for any bug report or suggestion on the [issues page](https://github.com/ShotaOchi/videor/issues).
 
 You can also fork this repository and send me a pull request for bug fixes or additional features.
