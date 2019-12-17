@@ -4,7 +4,7 @@ test_that("info_video",
   expect_error(info_video(path_wrong2))
   
   # bees.mp4
-  info_correct <- list(width = 1920, height = 1080, frames = 149, framerate = 24, duration = 6.208333, codec = "h264", format = "yuv420p")
+  info_correct <- list(width = 800, height = 800, frames = 73, framerate = 25, duration = 2.88, codec = "h264", format = "yuv420p")
   info_out <- info_video(bees)
   expect_equal(info_out$width, info_correct$width)
   expect_equal(info_out$height, info_correct$height)
