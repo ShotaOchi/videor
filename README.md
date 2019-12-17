@@ -66,16 +66,24 @@ I'm going to add functions in the future, but not soon.
 
 ### How to extract a frame from cimg object
 ```
-a <-  load_video(video, c(1, 3))
+a <- load_video(video, c(1, 3))
 # extract first frame 
 frame(a,1) %>% plot
 ```
 
 ### How to apply a function to all frames of cimg object
 ```
-a <-  load_video(video, c(1, 3))
+a <- load_video(video, c(1, 3))
 # apply isoblur function to all frames
 iiply(a, "z", isoblur, sigma = 5) %>% play(delay = 300, loop = TRUE)
+```
+
+### How to combine cimg objects into a cimg object
+```
+a1 <- load_video(video, 1)
+a2 <- load_video(video, 2)
+a3 <- load_video(video, 3)
+imappend(ci(a1, a2, a3), "z") %>% play(delay = 300, loop = TRUE)
 ```
 
 ## Contribution
