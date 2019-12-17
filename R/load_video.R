@@ -41,6 +41,6 @@ load_video <- function(video, frames, nb_frames, step = 1, maxSize = 1)
     return(load.video(video, extra.args = sprintf("-vf trim=start_frame=%d:end_frame=%d", frames[1] - 1, frames[2]), maxSize = maxSize))
   } else
   {
-    return(load.video(video, extra.args = sprintf("-vsync vfr -vf select='if(between(n,%d,%d),not(mod(n-%d\\,%d)))'", frames[1] - 1, frames[2], frames[1] - 1, step), maxSize = maxSize))
+    return(load.video(video, extra.args = sprintf("-vsync vfr -vf select='if(between(n\\,%d\\,%d)\\,not(mod(n-%d\\,%d)))'", frames[1] - 1, frames[2], frames[1] - 1, step), maxSize = maxSize))
   }
 }
