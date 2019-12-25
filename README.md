@@ -32,6 +32,7 @@ info_video returns a list containg video information.
 
 load_video returns a cimg object that is specified frames of video.
 
+load_video works with avi, gif, mp4, webm, and wmv.
 ```r
 library(videor)
 video <- system.file("extdata", "counts.gif", package = "videor")
