@@ -10,8 +10,6 @@ r:
   - release
   - devel
 
-r_check_args: --use-valgrind
-
 addons:
   apt:
     packages:
@@ -29,7 +27,6 @@ addons:
       - libx11-dev
       - r-cran-cairo
       - ffmpeg
-      - valgrind
     sources:
       - sourceline: 'ppa:cran/ffmpeg-4'
       - sourceline: 'ppa:cran/ffmpeg-3'
